@@ -2,12 +2,30 @@
   "name": "D-Clusterize",
   "version": "1.0",
   "description": "A better Read-Mode!!",
-  "permissions": ["activeTab", 
+  "minimum_chrome_version": "10.0",
+  "permissions": [
+    "activeTab",
     "declarativeContent",
-     "storage","webRequest","webRequestBlocking","http://*/*",
-     "https://*/*"],
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [
+      "background.js"
+    ],
     "persistent": true
   },
   "icons": {

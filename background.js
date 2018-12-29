@@ -13,6 +13,7 @@ chrome.webRequest.onBeforeRequest.addListener(
   { urls: ["<all_urls>"], types: ['script', 'image', 'stylesheet'], tabId: this.tabId },
   ["blocking"]);
 
+
 //OnInstall Boiler-Plate
 chrome.runtime.onInstalled.addListener(function () {
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
