@@ -1,5 +1,5 @@
 console.log('Content Script now Started!!');
 
-let tags= document.querySelector('body *');
+var innerStuff = document.getElementsByTagName('html')[0].innerHTML;
 
-console.log(tags)
+console.log(innerStuff);
